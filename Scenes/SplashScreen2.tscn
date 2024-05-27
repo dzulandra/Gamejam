@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://bq5oh4ujgdikx"]
+
+[ext_resource type="Script" path="res://Scripts/SplashScreen.gd" id="1_2bcow"]
+[ext_resource type="Texture2D" uid="uid://dfk3ss3vowb24" path="res://Assets/makara-fasilkom.png" id="2_bkuip"]
+[ext_resource type="Texture2D" uid="uid://chp73jodggicn" path="res://Assets/Makara_of_Universitas_Indonesia.png" id="3_nv66g"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2bcow")
+
+[node name="Container" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Container"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_bkuip")
+
+[node name="TextureRect2" type="TextureRect" parent="Container"]
+layout_direction = 1
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_nv66g")
+expand_mode = 2

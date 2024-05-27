@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://raank6n43ias"]
+
+[ext_resource type="Script" path="res://Scripts/SplashScreen.gd" id="1_rxb5u"]
+[ext_resource type="FontFile" uid="uid://bavg6j8538a2a" path="res://Assets/Candlefish.ttf" id="2_ny8xm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_do0av"]
+font = ExtResource("2_ny8xm")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 814.0
+offset_bottom = 435.0
+script = ExtResource("1_rxb5u")
+
+[node name="CenterContainer" type="VSplitContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CenterContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "https://www.dafont.com/candlefish.font
+https://penzilla.itch.io/hooded-protagonist
+
+"
+label_settings = SubResource("LabelSettings_do0av")

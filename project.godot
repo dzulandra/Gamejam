@@ -11,9 +11,10 @@ config_version=5
 [application]
 
 config/name="Gamejam"
-run/main_scene="res://UI/MainMenu.tscn"
+run/main_scene="res://Scenes/SplashScreenManager.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
+boot_splash/minimum_display_time=6000
 
 [display]
 
