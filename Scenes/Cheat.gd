@@ -1,7 +1,6 @@
 extends Button
-@export var main : Main
-
-
+signal cheat_enabled(is_enabled:bool)
+var cheat = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -12,6 +11,5 @@ func _process(delta):
 	pass
 
 
-func _on_pressed():
-	main.game_paused = true
-		
+func _on_pressed():	
+	emit_signal("cheat_enabled", cheat)
