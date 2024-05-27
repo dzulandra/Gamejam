@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cj1b3r3x0h7xl"]
+
+[ext_resource type="Script" path="res://Scenes/Main.gd" id="1_3m0u6"]
+[ext_resource type="TileSet" uid="uid://dm31ueircacbf" path="res://Assets/World.tres" id="3_pts5j"]
+[ext_resource type="PackedScene" uid="uid://do1xxmxewhxa8" path="res://Scenes/Room.tscn" id="4_17xp4"]
+[ext_resource type="PackedScene" uid="uid://m8c3muy7unwj" path="res://UI/PauseMenu.tscn" id="4_nwncp"]
+
+[node name="Main" type="Node2D"]
+process_mode = 1
+position = Vector2(-9, 4)
+script = ExtResource("1_3m0u6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer" node_paths=PackedStringArray("main") instance=ExtResource("4_nwncp")]
+main = NodePath("../..")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("3_pts5j")
+rendering_quadrant_size = 32
+format = 2
+
+[node name="Node2D" parent="." instance=ExtResource("4_17xp4")]

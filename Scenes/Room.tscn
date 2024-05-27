@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://do1xxmxewhxa8"]
+
+[ext_resource type="Script" path="res://Scenes/Room.gd" id="1_kllck"]
+[ext_resource type="TileSet" uid="uid://dm31ueircacbf" path="res://Assets/World.tres" id="2_ydlmi"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_kllck")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("2_ydlmi")
+format = 2
